@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Material Design - Color Schema</title>
+	<style type="text/css">
+		* {
+			border: 0;
+			box-sizing: border-box;
+			font-family: Open Sans;
+			margin: 0;
+			padding: 0;
+		}
+
+		h2 {
+			margin: 5px;
+		}
+
+		div {
+			border-radius: 3px;
+			color: white;
+			display: inline-block;
+			font-family: Open Sans;
+			font-weight: bold;
+			height: 100px;
+			margin: 5px;
+			padding: 10px;
+			width: 150px;
+		}
+
+		.red {background-color: #F44336}
+		.pink {background-color: #E91E63}
+		.purple {background-color: #9C27B0}
+		.deep-purple {background-color: #673AB7}
+		.indigo {background-color: #3F51B5}
+		.blue {background-color: #2196F3}
+		.light-blue {background-color: #03A9F4}
+		.cyan {background-color: #00BCD4}
+		.teal {background-color: #009688}
+		.green {background-color: #4CAF50}
+		.light-green {background-color: #8BC34A}
+		.lime {background-color: #CDDC39}
+		.yellow {background-color: #FFEB3B}
+		.amber {background-color: #FFC107}
+		.orange {background-color: #FF9800}
+		.deep-orange {background-color: #FF5722}
+		.brown {background-color: #795548}
+		.gray {background-color: #9E9E9E}
+		.blue-gray {background-color: #607D8B}
+		.black {background-color: #000000}
+
+		.apple.red {background-color: #FF334B}
+		.apple.orange {background-color: #FF9B23}
+		.apple.yellow {background-color: #F7D033}
+		.apple.green {background-color: #0ECD0E}
+		.apple.blue {background-color: #33B6F8}
+		.apple.purple {background-color: #DC70E5}
+		.apple.gray {background-color: #A4A4A7}
+
+		section {
+			background-color:rgba(244,67,54,.1);
+		}
+
+	</style>
+	<script type="text/javascript" src="./jquery-2.2.1.min.js"></script>
+</head>
+<body>
+	<section id="google">
+		<h2>Google - Material Design Colors</h2>
+		<div class="red">red</div>
+		<div class="pink">pink</div>
+		<div class="purple">purple</div>
+		<div class="deep-purple">deep-purple</div>
+		<div class="indigo">indigo</div>
+		<div class="blue">blue</div>
+		<div class="light-blue">light-blue</div>
+		<div class="cyan">cyan</div>
+		<div class="teal">teal</div>
+		<div class="green">green</div>
+		<div class="light-green">light-green</div>
+		<div class="lime">lime</div>
+		<div class="yellow">yellow</div>
+		<div class="amber">amber</div>
+		<div class="orange">orange</div>
+		<div class="deep-orange">deep-orange</div>
+		<div class="brown">brown</div>
+		<div class="gray">gray</div>
+		<div class="blue-gray">blue-gray</div>
+		<div class="black">black</div>
+	</section>
+	<section id="apple">
+		<h2>Apple - OSX Colors</h2>
+		<div class="apple red">red</div>
+		<div class="apple orange">orange</div>
+		<div class="apple yellow">yellow</div>
+		<div class="apple green">green</div>
+		<div class="apple blue">blue</div>
+		<div class="apple purple">purple</div>
+		<div class="apple gray">gray</div>
+	</section>
+	<script type="text/javascript">
+		$(function () {
+			$('section div').on('click', function (event) {
+				var color = getElementColor(event.originalEvent.target);
+				setBackgroundColor(color);
+			})
+		})
+
+		function setBackgroundColor(color) {
+			color = color.replace(')', ',.3)').replace('rgb', 'rgba');
+			document.body.style.backgroundColor = color;
+		}
+
+		function getElementColor(element) {
+			var result = 'rgba(255,0,0,1);'
+
+			if (element.currentStyle) {
+		    	result =  element.currentStyle.backgroundColor;
+		    }
+		    else if (window.getComputedStyle) {
+				var elementStyle = window.getComputedStyle(element,"");
+				if (elementStyle)
+					result = elementStyle.getPropertyValue("background-color");
+			}
+			
+			return result;
+		}
+	</script>
+</body>
+</html>

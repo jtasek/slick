@@ -1,0 +1,112 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background: purple;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.menubar {
+  background: green;
+  display: flex;
+  flex: 2 1 auto;
+  line-height: 20px;
+  list-style: none;
+}
+
+.menubar li {
+  border: 1px solid yellow;
+  display: flex;
+  flex: 1 0 auto;
+  list-style-type: none;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.menubar a {
+  margin: auto;
+}
+
+.searchbar {
+  border: 3px solid white;
+  display: flex;
+  flex: 1 0 auto;
+  width: 250px;
+}
+
+.searchbar input {
+  margin: auto;
+}
+
+main {
+  background: white;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  background: red;
+  transition: width 1s ease-in-out;
+  width: 50px;
+}
+
+.sidebar {
+  background: blue;
+  flex: 1 1 auto;
+  transition: width 1s ease-in-out;
+  width: 250px;
+}
+
+.sidebar .left {
+  align-self: flex-start;
+}
+
+.sidebar .right {
+  align-self: flex-end;
+}
+
+.workspace {
+  background: grey;
+  width: 100%;
+}
+
+footer {
+  align-items: stretch;
+  background: purple;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: center;
+}
+
+footer div {
+  border: 1px solid white;
+  flex: 1 0 auto;
+  margin: auto;
+}

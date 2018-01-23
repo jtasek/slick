@@ -1,0 +1,39 @@
+.navbar {
+	/*border: 2px solid #c06;*/
+	background-color: rgba(255, 255, 255, .1);
+	box-sizing: border-box;
+	color: rgb(224, 224, 224);
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	line-height: 20px;
+	list-style: none;
+	width: 50px;
+}
+
+.navbar li {
+	/*border: 2px solid #c06;*/
+	box-shadow: inset 0 -1px #41444a;
+	display: flex;
+	height: 50px;
+	width: 50px;
+}
+
+.navbar svg {
+	color: rgba(255, 255, 255, 0.7);
+	margin: auto;
+}
+
+.navbar svg:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.navbar li a {
+	background-color: transparent;
+	color: rgb(158, 158, 158);
+	text-decoration: none;
+}
+
+/*.navbar li a:hover {
+	color: rgb(255, 255, 255);
+}*/

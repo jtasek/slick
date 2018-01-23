@@ -1,0 +1,45 @@
+.lane {
+    background: rgb(225,225,225);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 100%;
+    margin: 5px;
+    min-width: 250px;
+    overflow: auto;
+    padding: 5px;
+    transition: box-shadow 0.2s ease-in-out;
+    user-select: none;
+}
+
+.lane {
+
+}
+
+.lane:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    cursor: move;
+}
+
+.list {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.lane .footer {
+    color: rgba(0,0,0,.5);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0px 5px;
+}
+
+.lane h2 {
+    color: rgba(0,0,0,.7);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+}

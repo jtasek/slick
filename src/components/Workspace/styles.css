@@ -1,0 +1,21 @@
+.workspace {
+	/*border: 2px solid #c06;*/
+	align-content: flex-start;
+	background-color: rgb(242,242,242);
+	color: rgb(137, 148, 155);
+	display: flex;
+	flex-flow: row wrap;
+	flex: 1 0 auto;
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.workspace h1 {
+	color: rgb(137, 148, 155);
+    font-size: 24px;
+    font-weight: 300;
+    margin: 20px;
+    text-transform: uppercase;
+}

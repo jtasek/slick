@@ -1,0 +1,61 @@
+.colorFilter {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    left: 25px;
+    max-width: 30%;
+    margin: 10px 0;
+}
+
+.colorFilter li {
+    display: inline-block;
+    flex: 0 0 auto;
+    list-style-type: none;
+    position: relative;
+    padding-right: 25px;
+}
+
+.colorFilter a:before {
+    border-radius: 50%;
+    content: '';
+    flex: 0 0 auto;
+    height: 10px;
+    left: -15px;
+    line-height: 1em;
+    position: absolute;
+    top: 5px;
+    width: 10px;
+}
+
+.blue:before {
+    background-color: #33b6f8;
+}
+
+.grey:before {
+    background-color: #a4a4a7;
+}
+
+.green:before {
+    background-color: #0ecd0e;
+}
+
+.orange:before {
+    background-color: #ff9b23;
+}
+
+.purple:before {
+    background-color: #dc70e5;
+}
+
+.red:before {
+    background-color: #ff334b;
+}
+
+.yellow:before {
+    background-color: #f7d033;
+}
+
+.reset:before {
+    background-color: #ffffff;
+}

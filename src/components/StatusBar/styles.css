@@ -1,0 +1,19 @@
+.statusBar {
+	align-items: stretch;
+	background-color: purple;
+	box-sizing: border-box;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	font-size: 14px;
+	height: 25px;
+	line-height: 20px;
+	z-index: 100;
+}
+
+.statusBar div {
+	flex: 1 0 auto;
+	margin: auto;
+	padding: 0 10px;
+}

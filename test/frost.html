@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        svg {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            background-color: white;
+            /* filter: blur(2px); */
+            /* filter: url("data:image/svg+xml;utf8,<svg><filter id=\'blur\'><feGaussianBlur stdDeviation=\'3\'/></filter></svg>#blur"); */
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            bottom: -25px;
+            right: -25px;
+            width: 100%;
+            height: 100%;
+            filter: url(#filter);
+        }
+
+        .dialog {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <filter id="filter">
+                <feColorMatrix in="SourceGraphic" result="LIGHTENED" type="matrix" values="3.3 0 0 0 0,
+                0 3.3 0 0 0,
+                0 0 3.3 0 0,
+                0 0 0 1 0"></feColorMatrix>
+                <feGaussianBlur color-interpolation-filters="sRGB" id="blur_1" stdDeviation="4" result="blur" in="LIGHTENED"></feGaussianBlur>
+                <feImage id="feimage" xlink:href="data:image/svg+xml;charset=utf-8,<svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;  width=&quot;100&quot; height=&quot;100&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;black&quot;/></svg>"
+                    x="0" y="0" width="100%" height="100%" result="mask" preserveAspectRatio="none"></feImage>
+                <feComposite in2="mask" in="blur" operator="in" result="comp"></feComposite>
+                <feMerge result="merge">
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                    <feMergeNode in="comp"></feMergeNode>
+                </feMerge>
+            </filter>
+        </svg>
+        <div class="background">
+            I have been very lucky with fossil bones; I have fragments of at least six distinct animals; as many of these are teeth,
+            shattered and rolled as they have been, I trust they will be recognized. I have paid all the attention I am capable
+            of, to their geological site; but of course it is too long a story for a letter. 1st. the tarsi and meta-tarsi,
+            very perfect, of a cavia;1 2d. the upper jaw and head of some very large animal, with four square hollow molars,
+            and the head greatly produced in front. I at first thought it belonged either to the megalonyx or megatherium.2
+            In confirmation of this, in the same formation, I found a large surface of the osseous polygonal plates, which
+            "late observations" (what are they?) have shewn to belong to the megatherium. Immediately I saw them I thought
+            they must belong to an enormous armadillo, living species of which genus are so abundant here. 3d. The lower
+            jaw of some large animal, which, from the molar teeth I should think belonged to the edentata;3 4th. large molar
+            teeth, which in some respects would seem to belong to some enormous species of rodentia; 5th. also some smaller
+            teeth belonging to the same order, &c. &c.—They are mingled with marine shells, which appear to me identical
+            with existing species. But since they were deposited in their beds, several geological changes have taken place
+            in the country
+        </div>
+    </div>
+    <div class="dialog">
+        Whohoooo dialog
+    </div>
+</body>
+
+</html>

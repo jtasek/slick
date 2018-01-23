@@ -1,0 +1,8 @@
+.view {
+	align-content: flex-start;
+	flex: 1 1 auto;
+	background-color: rgb(241, 241, 241);
+	color: rgb(137, 148, 155);
+	margin: 0;
+	padding: 10px;
+}

@@ -1,0 +1,88 @@
+header {
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.14); */
+    color: rgb(100, 100, 100);
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    height: 50px;
+    z-index: 100;
+    /*border: 2px solid #f06;*/
+}
+
+.hot {
+    border: 2px solid #f06;
+}
+
+.logo {
+    display: inline-block;
+    height: 50px;
+    text-transform: uppercase;
+    width: 50px;
+}
+
+.icon {
+    color: #fff;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+header a {
+    color: #2196f3;
+    outline: 0;
+    text-decoration: none;
+    display: block;
+}
+
+.save {
+    align-items: center;
+    stroke: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.logout {
+    align-items: center;
+    stroke: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.logout svg {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.logout svg:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.profile {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.profile label {
+    color: inherit;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+header .right {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}

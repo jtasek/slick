@@ -1,0 +1,21 @@
+.layout {
+    align-items: stretch;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-weight: 16px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    /* filter: blur(10px); */
+}
+
+.main {
+    /* border: 2px solid #f06; */
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: auto;
+}

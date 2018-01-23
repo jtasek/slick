@@ -1,0 +1,45 @@
+.menuBar {
+	/*border: 2px solid #f06;*/
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	font-size: 18px;
+	line-height: 18px;
+	list-style: none;
+	/*text-transform: uppercase;*/
+}
+
+.menuBar li {
+	align-items: center;
+	border-bottom: 3px solid rgb(250,250,250);
+	box-sizing: border-box;
+	color: rgb(100,100,100);
+	display: flex;
+	list-style-type: none;
+	padding: 3px 10px 0 10px;
+	transition: border 0.2s ease-in;
+}
+
+.menuBar li:hover, .menuBar li:active {
+	color: rgb(50,50,50);
+}
+
+.menuBar li.active {
+	border-bottom: 3px solid #2196f3;
+	color: #2196f3;
+}
+
+.menuBar span {
+	font-size: 14px;
+	padding: 0 5px;
+}
+
+.menuBar li a {
+	align-self: stretch;
+	color: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+}

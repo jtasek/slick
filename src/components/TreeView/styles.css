@@ -1,0 +1,59 @@
+/*
+ul has children #4D5158
+ul has children active #3C3F45
+li leaf #35383D
+box-shadow: inset 0 -1px #555960;
+*/
+.treeView label::before, .treeView label::after, .treeView a::after {
+  /* icons */
+  content: '';
+  display: inline-block;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+}
+.treeView label {
+  cursor: pointer;
+}
+.treeView label::before, .treeView label::after {
+  background-image: url(/static/images/icons.svg);
+  background-repeat: no-repeat;
+}
+.treeView label::before {
+  /* arrow icon */
+  background-position: 0 0;
+  left: 18px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.treeView label::after {
+  /* folder icons */
+  background-position: -16px 0;
+  left: 41px;
+}
+.treeView a::after {
+  /* image icon */
+  background: url(/static/images/icons.svg) no-repeat -48px 0;
+  left: 36px;
+}
+.treeView .checked + label::before {
+  /* rotate arrow */
+  transform: translateY(-50%);
+}
+.treeView .checked + label::after {
+  /* show open folder icon if item is checked */
+  background-position: -32px 0;
+}
+.treeView .checked + label + ul,
+.treeView .checked + label:nth-of-type(n) + ul {
+  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+  /* show children when item is checked */
+  display: block;
+}
+.treeView ul label,
+.treeView ul a {
+  background: #35383d;
+  box-shadow: inset 0 -1px #41444a;
+  padding-left: 82px;
+}

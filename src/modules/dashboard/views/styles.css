@@ -1,0 +1,51 @@
+.tile {
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.tile a {
+    padding-left: 10px;
+    border-left: 4px solid rgb(221, 77, 221);
+}
+
+.tile:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.view {
+    align-content: flex-start;
+    background-color: rgb(241, 241, 241);
+    color: rgb(137, 148, 155);
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 10px;
+}
+
+.count {
+    border: 0;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 2.5em;
+}
+
+.title {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+}

@@ -1,0 +1,5 @@
+.CardList {
+	/*border: 1px solid #f6e;*/
+	display: flex;
+	flex-flow: row wrap;
+}

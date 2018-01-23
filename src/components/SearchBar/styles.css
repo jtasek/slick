@@ -1,0 +1,51 @@
+.searchBar {
+    background-color: rgb(250,250,250);
+    border-radius: 3px;
+    border: 1px solid rgb(230,230,230);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 20px;
+    transition: .5s ease-in-out;
+    height: 32px;
+}
+
+.searchBar:focus {
+    background-color: rgba(255,255,255,1);
+    color: black;
+}
+
+.searchBar:hover {
+    background-color: rgba(255,255,255,1);
+    color: black;
+    transition: .5s ease-in-out;
+}
+
+.searchBar:active {
+    background-color: rgba(255,255,255,1);
+    color: black;
+    transition: .5s ease-in-out;
+}
+
+.searchBar svg {
+    /*color: rgba(0,0,0,.7);*/
+    margin: auto;
+    padding-left: 2px;
+    /*fill: rgba(0,0,0,.7);*/
+}
+
+.searchBar form {
+    display: flex;
+}
+
+.searchBar input[type=search] {
+    /*border: 2px solid #f06;*/
+    background: 0;
+    display: inline-block;
+    font-size: 18px;
+    padding-right: 5px;
+    margin: auto;
+    outline: 0;
+    width: 250px;
+}

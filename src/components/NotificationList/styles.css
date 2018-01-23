@@ -1,0 +1,8 @@
+.NotificationList {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 0;
+	top: 56px;
+	z-index: 99999;
+}
