@@ -5,6 +5,6 @@ import { state } from 'cerebral/tags'
 export default Compute(state`notifications`, notifications => {
   return Object.keys(notifications).map(id => ({
     id,
-    path: `notifications.${id}`,
+    path: `notifications.${id}`
   }))
 })

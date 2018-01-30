@@ -1,0 +1,7 @@
+.close {
+  /* auto on the left force icon to the right even when there is no .dialog-title */
+  background-color: transparent;
+  margin: -15px -15px -15px auto;
+  outline: 0;
+  padding: 15px;
+}

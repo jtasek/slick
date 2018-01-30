@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './styles.css'
 import { connect } from '@cerebral/react'
-import { state, props } from 'cerebral/tags'
+import { props, signal, state } from 'cerebral/tags'
+import CloseButton from '../CloseButton'
 
 const types = {
   info: 'info',
@@ -10,7 +11,7 @@ const types = {
   error: 'error'
 }
 
-const Notification = ({ item }) => {
+const Notification = ({ item, onClose }) => {
   const { type, title, message } = item
   return (
     <div className={styles[type]}>
@@ -22,7 +23,8 @@ const Notification = ({ item }) => {
 
 export default connect(
   {
-    item: state`${props`path`}`
+    item: state`${props`path`}`,
+    onClose: signal`notificationClosed`
   },
   Notification
 )

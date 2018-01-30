@@ -2,5 +2,10 @@ import { Compute } from 'cerebral'
 import { state } from 'cerebral/tags'
 
 export default Compute(state`forms`, dialogs => {
-    return Object.keys(dialogs).filter(dialog => dialog.visible)
+  var result = Object.keys(dialogs)
+    .map(key => dialogs[key])
+    .filter(dialog => dialog.visible)
+
+  console.dir(result)
+  return result
 })

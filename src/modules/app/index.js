@@ -1,5 +1,5 @@
 import { Module } from 'cerebral'
-import { set, debounce } from 'cerebral/operators'
+import { set, debounce, when } from 'cerebral/operators'
 import { state } from 'cerebral/tags'
 // system modules
 import FormsProvider from '@cerebral/forms'
@@ -9,11 +9,13 @@ import Shortcuts from '@cerebral/shortcuts'
 import alerts from '../alerts'
 import dashboard from '../dashboard'
 import events from '../events'
+import organizations from '../organizations'
 import projects from '../projects'
 import tasks from '../tasks'
 import teams from '../teams'
 import users from '../users'
 // actions
+import deleteNotification from './actions/deleteNotification'
 import filter from './actions/filter'
 import invalidRoute from './actions/invalidRoute'
 import resetFilter from './actions/resetFilter'
@@ -26,38 +28,51 @@ import routes from './routes'
 import shortcuts from './shortcuts'
 
 export default Module({
-    state: config,
-    modules: {
-        alerts,
-        dashboard,
-        events,
-        projects,
-        tasks,
-        teams,
-        users,
-        router: Router({
-            onlyHash: true, // Use hash urls
-            routes
-        }),
-        shortcuts: Shortcuts(shortcuts)
-    },
-    providers: {
-        forms: FormsProvider()
-    },
-    signals: {
-        home: [set(state`currentPage`, 'Dashboard')],
-        filter: [filter],
-        resetFilter: [resetFilter],
-        saveSearch: [saveSearch],
-        search: [
-            debounce(200),
-            {
-                continue: [search],
-                discard: []
-            }
+  state: config,
+  modules: {
+    alerts,
+    dashboard,
+    events,
+    organizations,
+    projects,
+    tasks,
+    teams,
+    users,
+    router: Router({
+      onlyHash: true, // Use hash urls
+      routes
+    }),
+    shortcuts: Shortcuts(shortcuts)
+  },
+  providers: {
+    forms: FormsProvider()
+  },
+  signals: {
+    home: [set(state`currentPage`, 'Dashboard')],
+    filter: [filter],
+    invalidRouted: [invalidRoute],
+    notificationClosed: [deleteNotification],
+    resetFilter: [resetFilter],
+    searchReset: [set(state`search`, ''), set(state`searches`, [])],
+    saveSearch: [saveSearch],
+    tagClicked: [
+      set(state`searching`, true),
+      search,
+      set(state`searching`, false)
+    ],
+    searched: [
+      when(state`searching`),
+      {
+        false: [
+          debounce(200),
+          {
+            continue: [search],
+            discard: []
+          }
         ],
-        resetSearch: [set(state`search`, ''), set(state`searches`, [])],
-        invalidRouted: [invalidRoute],
-        toggleDialog: [toggleDialog]
-    }
+        true: []
+      }
+    ],
+    toggleDialog: [toggleDialog]
+  }
 })
