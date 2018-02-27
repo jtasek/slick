@@ -15,10 +15,20 @@ export default {
     yellow: '#f7d033'
   },
   notifications: [
-    { type: 'info', title: 'Info', message: 'welcome to ...' },
-    { type: 'warn', title: 'Warning', message: 'new warning...' },
-    { type: 'success', title: 'Success', message: 'messaging system ...' },
-    { type: 'error', title: 'Failure', message: 'oh yeah ...' }
+    { time: 123, type: 'info', title: 'Info', message: 'welcome to ...' },
+    {
+      time: 124,
+      type: 'warn',
+      title: 'Warning',
+      message: 'new warning...'
+    },
+    {
+      time: 125,
+      type: 'success',
+      title: 'Success',
+      message: 'messaging system ...'
+    },
+    { time: 126, type: 'error', title: 'Failure', message: 'oh yeah ...' }
   ],
   pages: [
     'Dashboard',
@@ -37,34 +47,40 @@ export default {
   isLoading: false,
   forms: {
     organization: {
-      title: {
-        label: 'Organization name:',
-        value: '',
-        defaultValue: 'Enter organization name...',
-        isRequired: true,
-        validationRules: ['minLength:3']
-      },
-      description: {
-        label: 'Organization description:',
-        value: '',
-        defaultValue: 'Enter organization description...'
+      visible: false,
+      name: 'OrganizationCreate',
+      title: 'Create Organization',
+      showErrors: false,
+      fields: {
+        name: {
+          label: 'Organization name',
+          value: '',
+          defaultValue: 'Enter organization name...',
+          isRequired: true,
+          validationRules: ['minLength:3']
+        },
+        description: {
+          label: 'Organization description',
+          value: '',
+          defaultValue: 'Enter organization description...'
+        }
       }
     },
     project: {
       visible: false,
       name: 'ProjectCreate',
-      title: 'Create New Project',
+      title: 'Create Project',
       showErrors: false,
       fields: {
         name: {
-          label: 'Project name:',
+          label: 'Project name',
           value: '',
           defaultValue: 'Enter project name...',
           isRequired: true,
           validationRules: ['minLength:3']
         },
         description: {
-          label: 'Project description:',
+          label: 'Project description',
           value: '',
           defaultValue: 'Enter project description...'
         }

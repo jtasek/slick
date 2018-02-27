@@ -1,61 +1,68 @@
 .colorFilter {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    position: relative;
-    left: 25px;
-    max-width: 30%;
-    margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  left: 25px;
+  list-style: none;
+  margin: 10px 0;
+  max-width: 30%;
+  position: relative;
 }
 
 .colorFilter li {
-    display: inline-block;
-    flex: 0 0 auto;
-    list-style-type: none;
-    position: relative;
-    padding-right: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(30, 30, 30, 0.7);
+  display: inline-block;
+  flex: 0 0 auto;
+  font-size: 0.9em;
+  list-style-type: none;
+  margin-right: 10px;
+  padding: 3px 10px;
+  position: relative;
+  text-align: center;
 }
 
 .colorFilter a:before {
-    border-radius: 50%;
-    content: '';
-    flex: 0 0 auto;
-    height: 10px;
-    left: -15px;
-    line-height: 1em;
-    position: absolute;
-    top: 5px;
-    width: 10px;
+  border-radius: 50%;
+  content: '';
+  flex: 0 0 auto;
+  height: 10px;
+  left: -15px;
+  line-height: 1em;
+  position: absolute;
+  top: 5px;
+  width: 10px;
 }
 
 .blue:before {
-    background-color: #33b6f8;
+  background-color: #33b6f8;
 }
 
 .grey:before {
-    background-color: #a4a4a7;
+  background-color: #a4a4a7;
 }
 
 .green:before {
-    background-color: #0ecd0e;
+  background-color: #0ecd0e;
 }
 
 .orange:before {
-    background-color: #ff9b23;
+  background-color: #ff9b23;
 }
 
 .purple:before {
-    background-color: #dc70e5;
+  background-color: #dc70e5;
 }
 
 .red:before {
-    background-color: #ff334b;
+  background-color: #ff334b;
 }
 
 .yellow:before {
-    background-color: #f7d033;
+  background-color: #f7d033;
 }
 
 .reset:before {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }

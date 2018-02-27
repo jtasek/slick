@@ -22,6 +22,8 @@ import resetFilter from './actions/resetFilter'
 import saveSearch from './actions/saveSearch'
 import search from './actions/search'
 import toggleDialog from './actions/toggleDialog'
+// signals
+import fieldChanged from './signals/fieldChanged'
 // configuration
 import config from './config'
 import routes from './routes'
@@ -73,6 +75,7 @@ export default Module({
         true: []
       }
     ],
-    toggleDialog: [toggleDialog]
+    toggleDialog: [toggleDialog],
+    fieldChanged: fieldChanged
   }
 })

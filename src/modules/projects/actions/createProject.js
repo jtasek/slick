@@ -1,4 +1,5 @@
 export default function createProject({ forms, props, state, path }) {
+  console.log('Create project')
   const newid = Object.keys(state.get('projects')).length + 1
   const form = forms.get('forms.project.fields')
 

@@ -1,4 +1,5 @@
 import App from '/App'
+import ActionList from 'ActionList'
 import Card from '/Card'
 import CardList from '/CardList'
 import TagFilter from '/TagFilter'
@@ -23,27 +24,28 @@ import ViewTitle from '/ViewTitle'
 import Workspace from '/Workspace'
 
 export default {
-    App,
-    Card,
-    CardList,
-    TagFilter,
-    Confirmation,
-    Dialog,
-    Footer,
-    Header,
-    Icon,
-    Layout,
-    MenuBar,
-    NavBar,
-    NavTree,
-    Notification,
-    NotificationList,
-    Overlay,
-    SearchBar,
-    SideBar,
-    StatusBar,
-    TreeView,
-    View,
-    ViewTitle,
-    Workspace
+  App,
+  ActionList,
+  Card,
+  CardList,
+  TagFilter,
+  Confirmation,
+  Dialog,
+  Footer,
+  Header,
+  Icon,
+  Layout,
+  MenuBar,
+  NavBar,
+  NavTree,
+  Notification,
+  NotificationList,
+  Overlay,
+  SearchBar,
+  SideBar,
+  StatusBar,
+  TreeView,
+  View,
+  ViewTitle,
+  Workspace
 }

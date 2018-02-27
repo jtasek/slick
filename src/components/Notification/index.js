@@ -12,11 +12,12 @@ const types = {
 }
 
 const Notification = ({ item, onClose }) => {
-  const { type, title, message } = item
+  const { time, type, title, message } = item
   return (
     <div className={styles[type]}>
       <h3>{title}</h3>
       <div>{message}</div>
+      <span className={styles.time}>{time}</span>
     </div>
   )
 }

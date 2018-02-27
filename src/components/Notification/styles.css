@@ -1,40 +1,48 @@
 .notification {
-    background-color: #fff;
-    border-left: 5px solid #f06;
-    border-radius: 3px;
-    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-    color: #666;
-    display: inline-block;
-    font-size: 1em;
-    height: 50px;
-    line-height: 18px;
-    margin: 15px;
-    padding: 7px 10px;
-    transition: 1s ease-in-out;
-    width: 250px;
+  background-color: #fff;
+  border-left: 5px solid #f06;
+  border-radius: 3px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  color: #666;
+  display: inline-block;
+  font-size: 1em;
+  height: 50px;
+  line-height: 18px;
+  margin: 15px;
+  padding: 7px 10px;
+  position: relative;
+  transition: 1s ease-in-out;
+  width: 250px;
+  color: rgba(30, 30, 30, 0.7);
 }
 
 h3 {
-    font-size: 1em;
+  font-size: 1em;
+}
+
+.time {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .info {
-    composes: notification;
-    border-color: #66f;
+  composes: notification;
+  border-color: #66f;
 }
 
 .warn {
-    composes: notification;
-    border-color: #ff6;
+  composes: notification;
+  border-color: #ff6;
 }
 
 .success {
-    composes: notification;
-    border-color: #6f6;
+  composes: notification;
+  border-color: #6f6;
 }
 
 .error {
-    composes: notification;
-    border-color: #f66;
+  composes: notification;
+  border-color: #f66;
 }

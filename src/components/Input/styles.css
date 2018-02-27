@@ -1,0 +1,25 @@
+label {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  width: 100%;
+}
+
+.error {
+  color: rgb(255, 0, 0);
+  font-size: 0.9rem;
+  /* margin-top: 0.25rem; */
+}
+
+.visible {
+  display: inline-block;
+}

@@ -8,6 +8,7 @@ import Layout from '../../components/Layout'
 
 import visibleDialog from '../../modules/app/computed/visibleDialog'
 
+// todo register dynamically
 const views = {
   Alert: require('../../modules/alerts/views/detail').default,
   Alerts: require('../../modules/alerts/views/index').default,
@@ -28,6 +29,11 @@ const views = {
 
 // Memoize view loading
 const dialogs = {
+  OrganizationCreate: require('../../modules/organizations/dialogs/create')
+    .default,
+  OrganizationDelete: require('../../modules/organizations/dialogs/delete')
+    .default,
+  OrganizationEdit: require('../../modules/organizations/dialogs/edit').default,
   ProjectCreate: require('../../modules/projects/dialogs/create').default,
   ProjectDelete: require('../../modules/projects/dialogs/delete').default,
   ProjectEdit: require('../../modules/projects/dialogs/edit').default

@@ -7,13 +7,13 @@ import SearchFilter from '../SearchFilter'
 import ActionLink from '../ActionLink'
 
 const View = ({ title, items }) => (
-    <div className={styles.view}>
-        <ViewTitle title={title} />
-        <TagFilter />
-        <SearchFilter />
-        {/* <ActionLink title="+ Add New Project" url="#/projects/new" /> */}
-        <CardList items={items} />
-    </div>
+  <div className={styles.view}>
+    <ViewTitle title={title} />
+    <TagFilter />
+    <SearchFilter />
+    <ActionLink title="+ Add New Project" signal="#/projects/new" />
+    <CardList items={items} />
+  </div>
 )
 
 export default View

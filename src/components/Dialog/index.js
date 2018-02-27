@@ -23,18 +23,18 @@ export default class Dialog extends Component {
           {/* <Overlay> */}
           <div className={styles.header}>
             <h3 className={styles.title}>{title}</h3>
-            <CloseButton onClickHandler={() => onClose({ path: path })} />
+            <CloseButton onClick={onClose} path={path} />
           </div>
           <div className={styles.body}>{children}</div>
           <div className={styles.footer}>
             <button
               className={styles.secondary}
               action="close"
-              onClick={() => onClose({ path: path })}
+              onClick={e => onClose({ path: path })}
             >
               Close
             </button>
-            <button className={styles.primary} onClick={() => onSubmit()}>
+            <button className={styles.primary} onClick={e => onSubmit()}>
               {title}
             </button>
           </div>
