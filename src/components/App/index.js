@@ -29,6 +29,9 @@ const views = {
 
 // Memoize view loading
 const dialogs = {
+  EventCreate: require('../../modules/events/dialogs/create').default,
+  EventDelete: require('../../modules/events/dialogs/delete').default,
+  EventEdit: require('../../modules/events/dialogs/edit').default,
   OrganizationCreate: require('../../modules/organizations/dialogs/create')
     .default,
   OrganizationDelete: require('../../modules/organizations/dialogs/delete')
@@ -36,7 +39,16 @@ const dialogs = {
   OrganizationEdit: require('../../modules/organizations/dialogs/edit').default,
   ProjectCreate: require('../../modules/projects/dialogs/create').default,
   ProjectDelete: require('../../modules/projects/dialogs/delete').default,
-  ProjectEdit: require('../../modules/projects/dialogs/edit').default
+  ProjectEdit: require('../../modules/projects/dialogs/edit').default,
+  TaskCreate: require('../../modules/tasks/dialogs/create').default,
+  TaskDelete: require('../../modules/tasks/dialogs/delete').default,
+  TaskEdit: require('../../modules/tasks/dialogs/edit').default,
+  TeamCreate: require('../../modules/teams/dialogs/create').default,
+  TeamDelete: require('../../modules/teams/dialogs/delete').default,
+  TeamEdit: require('../../modules/teams/dialogs/edit').default,
+  UserCreate: require('../../modules/users/dialogs/create').default,
+  UserDelete: require('../../modules/users/dialogs/delete').default,
+  UserEdit: require('../../modules/users/dialogs/edit').default
 }
 
 const MissingPage = page => <h1>Page was not found</h1>

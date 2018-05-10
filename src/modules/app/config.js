@@ -53,14 +53,14 @@ export default {
       showErrors: false,
       fields: {
         name: {
-          label: 'Organization name',
+          label: 'Name',
           value: '',
           defaultValue: 'Enter organization name...',
           isRequired: true,
           validationRules: ['minLength:3']
         },
         description: {
-          label: 'Organization description',
+          label: 'Description',
           value: '',
           defaultValue: 'Enter organization description...'
         }
@@ -73,108 +73,150 @@ export default {
       showErrors: false,
       fields: {
         name: {
-          label: 'Project name',
+          label: 'Name',
           value: '',
           defaultValue: 'Enter project name...',
           isRequired: true,
           validationRules: ['minLength:3']
         },
         description: {
-          label: 'Project description',
+          label: 'Description',
           value: '',
           defaultValue: 'Enter project description...'
         }
       }
     },
     task: {
-      title: {
-        label: 'Task name:',
-        value: '',
-        defaultValue: 'Enter task name...',
-        isRequired: true,
-        validationRules: ['minLength:3']
-      },
-      description: {
-        label: 'Task description:',
-        value: '',
-        defaultValue: 'Enter task description...'
+      visible: false,
+      name: 'TaskCreate',
+      title: 'Create Task',
+      showErrors: false,
+      fields: {
+        name: {
+          label: 'Name:',
+          value: '',
+          defaultValue: 'Enter task name...',
+          isRequired: true,
+          validationRules: ['minLength:3']
+        },
+        description: {
+          label: 'Description:',
+          value: '',
+          defaultValue: 'Enter task description...'
+        }
       }
     },
     team: {
-      title: {
-        label: 'Team name:',
-        value: '',
-        defaultValue: 'Enter team name...',
-        isRequired: true,
-        validationRules: ['minLength:3']
-      },
-      description: {
-        label: 'Team description:',
-        value: '',
-        defaultValue: 'Enter team description...'
-      },
-      members: {
-        label: 'Team members:',
-        value: '',
-        defaultValue: 'Add member...'
+      visible: false,
+      name: 'TeamCreate',
+      title: 'Create Team',
+      showErrors: false,
+      fields: {
+        name: {
+          label: 'Name:',
+          value: '',
+          defaultValue: 'Enter team name...',
+          isRequired: true,
+          validationRules: ['minLength:3']
+        },
+        description: {
+          label: 'Description:',
+          value: '',
+          defaultValue: 'Enter team description...'
+        },
+        members: {
+          label: 'Members:',
+          value: '',
+          defaultValue: 'Add member...'
+        }
       }
     },
     event: {
-      title: {
-        label: 'Event name:',
-        value: '',
-        defaultValue: 'Enter event name...',
-        isRequired: true,
-        validationRules: ['minLength:3']
-      },
-      description: {
-        label: 'Event description:',
-        value: '',
-        defaultValue: 'Enter event description...'
-      },
-      date: {
-        label: 'Occurres:',
-        value: '8:00',
-        defaultValue: Date.now()
-      },
-      isRecurring: false,
-      schedule: [],
-      from: Date.now(),
-      to: Date.now() + 2,
-      invites: [],
-      owner: 'admin'
+      visible: false,
+      name: 'EventCreate',
+      title: 'Create Event',
+      showErrors: false,
+      fields: {
+        name: {
+          label: 'Name:',
+          value: '',
+          defaultValue: 'Enter event name...',
+          isRequired: true,
+          validationRules: ['minLength:3']
+        },
+        description: {
+          label: 'Description:',
+          value: '',
+          defaultValue: 'Enter event description...'
+        },
+        date: {
+          label: 'Occurres:',
+          value: '8:00',
+          defaultValue: Date.now()
+        },
+        isRecurring: {
+          label: 'Recurring:',
+          value: false,
+          defaultValue: false
+        },
+        schedule: {
+          label: 'Schedule:',
+          value: '',
+          defaultValue: ''
+        },
+        from: {
+          label: 'From:',
+          value: Date.now(),
+          defaultValue: ''
+        },
+        to: {
+          label: 'To:',
+          value: Date.now() + 2,
+          defaultValue: ''
+        },
+        owner: {
+          label: 'Owner:',
+          value: 'user',
+          defaultValue: ''
+        }
+      }
     },
     user: {
-      username: {
-        label: 'Username:',
-        value: '',
-        defaultValue: 'Enter username...',
-        isRequired: true,
-        validationRules: ['minLength:3']
-      },
-      firstName: {
-        label: 'First name:',
-        value: '',
-        defaultValue: 'Enter first name...'
-      },
-      lastName: {
-        label: 'Last name:',
-        value: '',
-        defaultValue: 'Enter last name...'
-      },
-      email: {
-        label: 'Email',
-        value: '',
-        defaultValue: 'Enter email...',
-        validationMessages: ['You must enter a valid email'],
-        validationRules: ['isEmail'] // add unique validator
-      },
-      roles: {
-        lable: 'Roles:',
-        value: '',
-        defaultValue: 'Add roles...'
-      },
-      showErrors: false
+      visible: false,
+      name: 'UserCreate',
+      title: 'Create User',
+      showErrors: false,
+      fields: {
+        username: {
+          label: 'Name:',
+          value: '',
+          defaultValue: 'Enter user name...',
+          isRequired: true,
+          validationRules: ['minLength:3']
+        },
+        firstname: {
+          label: 'First name:',
+          value: '',
+          defaultValue: 'Enter first name...'
+        },
+        lastname: {
+          label: 'Last name:',
+          value: '',
+          defaultValue: 'Enter last name...'
+        },
+        email: {
+          label: 'Email',
+          value: '',
+          defaultValue: 'Enter email...',
+          validationMessages: ['You must enter a valid email'],
+          validationRules: ['isEmail'] // add unique validator
+        },
+        roles: {
+          lable: 'Roles:',
+          value: '',
+          defaultValue: 'Add roles...'
+        }
+      }
     }
   },
   components: {

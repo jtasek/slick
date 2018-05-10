@@ -8,25 +8,16 @@ import Input from '../../../components/Input'
 
 export default connect(
   {
-    title: state`forms.organization.title`,
+    title: state`forms.project.title`,
     onChange: signal`fieldChanged`,
     onClose: signal`toggleDialog`,
-    onSubmit: signal`organizations.organizationUpdated`
+    onSubmit: signal`projects.projectUpdated`
   },
-  ({
-    title,
-    path = 'forms.organization.fields',
-    onChange,
-    onClose,
-    onSubmit
-  }) => (
+  ({ title, path = 'forms.project.fields', onChange, onClose, onSubmit }) => (
     <Dialog title={title} onSubmit={onSubmit} onClose={onClose} path={path}>
-      <Form path="forms.organization.fields">
-        <Input path="forms.organization.fields.name" onChange={onChange} />
-        <Input
-          path="forms.organization.fields.description"
-          onChange={onChange}
-        />
+      <Form path="forms.project.fields">
+        <Input path="forms.project.fields.name" onChange={onChange} />
+        <Input path="forms.project.fields.description" onChange={onChange} />
       </Form>
     </Dialog>
   )
